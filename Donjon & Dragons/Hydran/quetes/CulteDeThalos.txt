@@ -1,0 +1,63 @@
+1. Description
+
+	- Contacté par un emissaire d'Umberlie pour une mission
+	- Des adeptes de thalos sément la zazanie dans les îles environnantes
+	- Leur repère est dans un sanctuaire protégé par une protection magique -> necessité d'un artefact
+
+	
+2. Partie 1 : Recherche de l'équipage
+
+	2.1 Recherche de matelots
+		- Autres prêtres d'umberlee : ok pour fournir quelques sbires mais pas plus
+		- Recherches au port : rumeur d'un capitaine pirate ayant dénoncé son équipage pour ne pas être arreté 
+		- Ils sont enfermés dans la prison de WaterDeep
+	
+	2.2 Analyse de la prison
+		- Trouvés à la prison (4 cellules [qui donnent sur les murs exterieurs], 5 gardes[1 capitaine + 4 gardes])
+		- Le garde veut pas me les refiler (attente du procès : c'est une petite prison temporaire, pas la plus protégée)
+		- Les matelots : envie de vengeance, ok pour sortir (contact à l'interrieur)
+
+	2.3 Evasion de la prison
+		- Besoin de les faire sortir de là, pas seul
+		- Se rapprocher des guildes de voleurs/mercenaires
+		- RDV avec les Zentharins 
+		- Mise en place : repérage
+		- Plan :
+			* Communication à distance avec l'équipage (OK pour le plan, se ternir prêts)
+			* Sort de scruptation (pour observer la prison de l'interieur)
+			* Cabillot d'amarrage (empecher les gardes de nous suivre et prévenir les autres)
+			* Sort de silence en cas de besoin (les isoler)
+			* Sort de brouillard en cas de besoin (pour s'enfuir)
+			* Sort de manipulation de la pierre (pour l'ouverture des portes, avec refermeture) [besoin de 4, une par cellule, 3 car niveau 4 donc utilisation de l'anneau de stockage de sorts]
+			* Getteurs (chouette = civils, sifflement = gardes)
+		- Réussite (-200Po)
+		
+3. Partie 2 : Récupération de l'artéfact
+
+	3.1 Pousuite de l'ancien capitaine (Rakam)
+		- Rakam est les pirates étaient au service de Thalos
+		- Planque : iles MoonShaé (une des petites iles), les marins sauraient comment retrouver la planque
+		- En route pour les îles MoonShaé (création de nourriture et d'eau)
+		- Arrivée sur une petite île vide avec une grotte
+		- Trouvé petit coffre : 
+			* Collier ayant été irradié par une forte magie
+			* Lettre non signée (demande de payer sa part pour garder l'artefact de Thalos)
+			* Correspondance avec la famille de Rakam (Neverwinter) 
+		- Direction Neverwinter
+		- Attaque par un bateau pirate ennemi
+			* Lancement du sort de tourbillon et contrôle des vents
+			* Lettre indiquant que je suis une cible des fidèles de Thalos
+			
+	3.2 Recherche de la famille de Rakam
+		- Pas de trace à NeverWinter
+		- Retour à Fandalin (ordre de mon temple)
+		
+4. Retour à Fandalin
+
+	4.1 Investigations sur les phénomènes étranges
+		- Animaux éteints qui reprennent vie (morts vivants, Golems)
+		- Jungle de Shult au sud avec des plantes et animaux disparus (Pic des flammes, volcan)
+		- Phénomènes étranges dans les tourbières de Nono
+	
+			
+			

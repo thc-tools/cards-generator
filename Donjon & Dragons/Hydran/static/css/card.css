@@ -1,0 +1,394 @@
+	
+	html {
+		font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+	div.book {
+		width: 29.7cm;
+		
+		display:flex;
+		flex-wrap: wrap;	
+	}
+	
+	div.card {
+		width: 14cm;
+		height: 10cm;
+		display:flex;
+		flex-wrap: nowrap;
+		margin: 10px 10px 10px 10px;
+	}
+	
+	div.card div.face {
+		border-style : solid;
+		border-width: 10px;
+		border-radius: 20px;
+		width: calc(7cm - 20px);
+		
+		display: flex;
+		flex-direction: column;
+	}
+	
+	div.card.ALT div, div.card.ALT  img {
+		border-color : orange;
+	}
+	div.card.CHA div, div.card.CHA img {
+		border-color : purple;
+	}
+	div.card.DES div, div.card.DES img {
+		border-color : #d61e1e;
+	}
+	div.card.DIV div, div.card.DIV img {
+		border-color : #f7de2f;
+	}
+	div.card.GUÉ div, div.card.GUÉ  img {
+		border-color : green;
+	}
+	div.card.INV div, div.card.INV img {
+		border-color : lightblue;
+	}
+	div.card.REN div, div.card.REN  img {
+		border-color : #3f5988;
+	}
+	div.card.GRIMOIRE div, div.card.GRIMOIRE  img {
+		border-color: #59301c;
+	}
+	div.card.TRESOR div, div.card.TRESOR  img {
+		border-color: #59301c;
+	}	
+	div.card.EQUIPMENT div, div.card.EQUIPMENT  img {
+		border-color: #7f7f7f;
+	}
+	div.card.SKILLS div, div.card.SKILLS  img {
+		border-color: #893912;
+	}
+	div.card.DON div, div.card.DON  img {
+		border-color: #b8ceda;
+	}
+	div.card.HEALTH div, div.card.HEALTH  img {
+		border-color: #179400;
+	}
+	div.card.TEMPEST div, div.card.TEMPEST  img {
+		border-color: #3d4d78 /**#586892;**/
+	}
+	div.card.GENASI div, div.card.GENASI  img {
+		border-color: #487e9a;
+	}
+	div.card.STRAHD div, div.card.STRAHD  img {
+		border-color: #242444;
+	}
+	div.card.CREATURE div, div.card.CREATURE  img {
+		border-color: #113a46
+	}
+	
+	div.card.QUEST div, div.card.QUEST  img {
+		border-color: #e5d39d
+	}
+	
+	div.card div.face.front {
+		
+	}
+	
+	div.card div.face.front div.head {
+		height: 1cm;
+		padding: 5px 5px 5px 5px;
+		
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		
+		border-bottom-width: 5px;
+		border-bottom-style: solid;
+	}
+	
+	div.card div.face.front div.head div.name{
+		text-align: center;
+	}
+	
+	div.card div.face.front div.head div.name.VF{
+		font-weight: bold;
+		font-size: small;
+		flex: 5;
+	}
+	
+	div.card div.face.front div.head div.name.VO{
+		font-style: italic;
+		font-size: x-small;
+		flex: 3;
+	}
+	
+	div.card div.face.front div.head div.code{
+		flex: 2;
+		font-weight: bold;
+		
+		height: 100%;
+		width: 100%;
+		min-width: 35px;
+		max-width: 35px;
+		
+		background-size: 100% 100%;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	div.card div.face.front div.head div.code.ALT {
+		background-image: url("../image/ecole/ALT.png");
+		color: #ab4a00;
+	}
+	div.card div.face.front div.head div.code.CHA {
+		background-image: url("../image/ecole/CHA.png");
+		color: #d8a8e3;
+	}
+	div.card div.face.front div.head div.code.DES {
+		background-image: url("../image/ecole/DES.png"); 
+		color: #a52a2a;
+	}
+	div.card div.face.front div.head div.code.DIV {
+		background-image: url("../image/ecole/DIV.png");
+		color: #da9b00;
+	}
+	div.card div.face.front div.head div.code.GUÉ	{
+		background-image: url("../image/ecole/GUÉ.png");
+		color: #076807;
+	}
+	div.card div.face.front div.head div.code.INV {
+		background-image: url("../image/ecole/INV.png");
+		color: #066280;
+	}
+	div.card div.face.front div.head div.code.REN {
+		background-image: url("../image/ecole/REN.png");
+		color: #76b4ed;
+	}
+	div.card div.face.front div.head div.code.UMBERLEE {
+		background-image: url("../image/ecole/UMBERLEE.png");
+		color: #ab4a00;
+	}
+	div.card div.face.front div.head div.code.FIGHT	{
+		background-image: url("../image/ecole/FIGHT.png");
+	}
+	div.card div.face.front div.head div.code.ARMOR	{
+		background-image: url("../image/ecole/ARMOR.png");
+	}
+	div.card div.face.front div.head div.code.MAGIC	{
+		background-image: url("../image/ecole/MAGIC.png");
+	}
+	div.card div.face.front div.head div.code.POTION	{
+		background-image: url("../image/ecole/POTION.png");
+	}
+	div.card div.face.front div.head div.code.HEART	{
+		background-image: url("../image/ecole/HEART.png");
+	}
+	div.card div.face.front div.head div.code.DON	{
+		background-image: url("../image/ecole/DON.png");
+	}
+	div.card div.face.front div.head div.code.TEMPEST	{
+		background-image: url("../image/ecole/TEMPEST.png");
+	}
+	div.card div.face.front div.head div.code.TRIDENT	{
+		background-image: url("../image/ecole/TRIDENT.png");
+		color: #ffffff;
+		font-size: smaller;
+	}
+	div.card div.face.front div.head div.code.GENASI	{
+		background-image: url("../image/ecole/GENASI.png");
+	}
+	div.card div.face.front div.head div.code.SKILLS	{
+		background-image: url("../image/ecole/SKILLS.png");
+	}
+	div.card div.face.front div.head div.code.PIECES	{
+		background-image: url("../image/ecole/PIECES.png");
+	}
+	div.card div.face.front div.head div.code.STRAHD	{
+		background-image: url("../image/ecole/STRAHD.png");
+	}
+	div.card div.face.front div.head div.code.CREATURE	{
+		background-image: url("../image/ecole/CREATURE.png");
+	}
+
+	div.card div.face.front div.head div.code.QUEST	{
+		background-image: url("../image/ecole/QUEST.png");
+	}
+	
+	
+	div.card div.face.front div.image{
+		height: calc((7cm - 20px) * (4 / 7 ));
+	}
+	
+	div.card div.face.front div.image img{
+		width: calc(7cm - 20px);
+		
+	}
+	
+		
+	div.card div.face.front div.conditions {
+		height: 1.5cm;
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+		
+		
+	div.card div.face.front div.conditions div.incantation {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		
+		border-width: 5px;
+		border-right-style: solid;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		
+		border-right-width: 2.5px;
+
+		border-bottom-right-radius: 7px;
+		
+		flex-grow: 1;
+	}		
+	
+	div.card div.face.front div.conditions div.incantation.wrap {
+		flex-wrap: wrap;
+	}	
+	
+	div.card div.face.front div.conditions div.incantation div.parametre {
+		display:flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-items: center;
+		
+		font-size: x-small;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	div.card div.face.front div.conditions div.incantation div.parametre div.titre {
+		font-weight: bold;
+	}
+	
+	div.card div.face.front div.conditions div.incantation div.parametre div.valeur {
+		
+	}
+	
+	div.card div.face.front div.conditions div.zone {
+		border-width: 5px;
+		border-left-style: solid;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		
+		border-left-width: 2.5px;
+		border-bottom-left-radius: 7px;
+		
+		
+		width: calc(1.5cm - 5px);
+	}
+		
+	div.card div.face.front div.conditions div.zone img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	div.card div.face.front div.resume {
+		margin: 10px 10px 10px 10px;
+		height: 2.5cm;
+		text-align: justify;
+		
+		font-size: small;
+	}
+	
+	div.card div.face.front div.resume.small {
+		font-size: x-small;
+	}
+	
+	div.card div.face.front div.resume.x-small {
+		font-size: xx-small;
+	}
+	
+	div.card div.face.front div.resume div.wrap {
+		flex-direction: row !important;
+		flex-wrap: wrap !important;
+	}
+	
+	div.card div.face.front div.resume div.liste {
+		width: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+	}
+	
+	div.card div.face.front div.resume div.caracteristiques {
+		height: 100%;
+		width: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: start;
+	}
+	
+	
+	
+	div.card div.face.front div.resume div.caracteristiques div.caracteristique {
+		display: flex;
+		flex-wrap: nowrap; 
+		justify-content: space-around;
+	}
+	
+	div.card div.face.front div.resume div.caracteristiques div.caracteristique div.nom {
+		font-weight: bold;
+	}
+	
+	div.card div.face.front div.resume div.caracteristiques div.caracteristique div.valeur {
+		margin-left: 2px;
+		font-style: normal;
+		display: flex;
+	}
+	
+	div.card div.face.front div.resume div.caracteristiques div.caracteristique div.info {
+		margin-left: 2px;
+		font-style: italic;
+	}
+	
+	div.card div.face.back {
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	div.card div.face.back div.body {
+		margin: 10px 10px 10px 10px;
+		text-align: justify;
+	}
+	
+	div.card div.face.back div.body.normal {
+		font-size: 12px;
+	}
+	
+	div.card div.face.back div.body.medium {
+		font-size: 11px;
+	}
+	
+	div.card div.face.back div.body.small {
+		font-size: 9.5px;
+	}
+	
+	div.card div.face.back div.body.x-small {
+		font-size: 8px;
+	}
+	
+	div.card div.face ul {
+		padding-inline-start: 20px;
+	}
+	
+	@media print {
+		div.card {
+			display: none;
+		}
+		
+		div.card.PRINT {
+			display: flex;
+		}
+	}	

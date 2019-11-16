@@ -1,0 +1,466 @@
+	
+	html {
+		font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	}
+	
+	em {
+		font-style : normal;
+		background-color : #ffff00;
+	}
+	
+	.book {
+		width: 29.7cm;
+		
+		display:flex;
+		flex-wrap: wrap;	
+	}
+	
+	.card {
+		width: 14cm;
+		height: 10cm;
+		display:flex;
+		flex-wrap: nowrap;
+		margin: 10px 10px 10px 10px;
+	}
+	
+	.face {
+		border-style : solid;
+		border-width: 10px;
+		border-radius: 20px;
+		width: calc(7cm - 20px);
+		
+		display: flex;
+		flex-direction: column;
+	}
+	
+
+	.head {
+		height: 1cm;
+		padding: 5px 5px 5px 5px;
+		
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		
+		border-bottom-width: 5px;
+		border-bottom-style: solid;
+	}
+	
+	.name {
+		text-align: center;
+	}
+	
+	.VF {
+		font-weight: bold;
+		font-size: small;
+		flex: 5;
+	}
+	
+	.VO {
+		font-style: italic;
+		font-size: x-small;
+		flex: 3;
+	}
+	
+	.code {
+		flex: 2;
+		font-weight: bold;
+		
+		height: 100%;
+		width: 100%;
+		min-width: 35px;
+		max-width: 35px;
+		
+		background-size: 100% 100%;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	.front .image {
+		height: calc((7cm - 20px) * (4 / 7 ));
+	}
+	
+	.front .image img {
+		width: calc(7cm - 20px);
+	}
+	
+		
+	.conditions {
+		height: 1.5cm;
+		font-size: x-small;
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+		
+		
+	.incantation {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		
+		padding: 1px 10px 1px 10px;
+		
+		border-width: 5px;
+		border-right-style: solid;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		border-right-width: 2.5px;
+		border-bottom-right-radius: 7px;
+		
+		flex-grow: 1;
+	}			
+	
+	.parametre {		
+		display:flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		align-items: baseline;
+	}
+	
+	.parametre.align {
+		align-items: center;
+	}
+	
+	.ligne {		
+		text-align: justify;	
+	}
+	
+	.ligne div {		
+		display: inline !important;
+	}
+	
+	.ligne.space {		
+		margin-bottom: 10px;
+	}
+	
+	.grow1 {
+		flex-grow: 1;
+	}
+	
+	.grow2 {
+		flex-grow: 2;
+	}
+	
+	.grow3 {
+		flex-grow: 3;
+	}
+	
+	.grow4 {
+		flex-grow: 4;
+	}
+	
+	.grow5 {
+		flex-grow: 5;
+	}
+	
+	.cases {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.case {
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+		font-size: 8px;
+	}
+	
+	.case.withcheck {
+		font-size: 6px;
+		margin-top: -5px;
+		margin-bottom: -5px;
+	}
+	
+	.case.withcheck input[type=checkbox] {
+		transform: scale(0.65);
+	}
+	
+	.zone {
+		border-width: 5px;
+		border-left-style: solid;
+		border-top-style: solid;
+		border-bottom-style: solid;
+		
+		border-left-width: 2.5px;
+		border-bottom-left-radius: 7px;
+		
+		
+		width: calc(1.5cm - 5px);
+	}
+		
+	.zone img {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.resume {
+		margin: 10px 10px 10px 10px;
+		height: 2.5cm;		
+		font-size: small;
+		
+		display: flex;
+		flex-direction: column;
+	}	
+	
+	.resume.small {
+		font-size: x-small;
+	}
+	
+	.resume.x-small {
+		font-size: xx-small;
+	}
+	
+	.resume.xx-small {
+		font-size: 7px;
+	}
+	
+	.xxx-small {
+		font-size: 6.7px;
+	}
+	
+	.rowwrap {
+		flex-direction: row !important;
+		flex-wrap: wrap !important;
+	}
+	
+	.liste {
+		width: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: start;
+	}
+	
+	.block {
+		height: 100%;
+		width: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: start;
+	}
+	
+	.left {	
+		justify-content: left;
+	}
+	.vertical {	
+		flex-direction: column;
+	}
+	
+	.nom {
+		font-weight: bold;
+	}
+	
+	.points {
+		margin-left: 2px;
+		margin-right: 2px;
+	}
+	
+	.valeur {
+		font-style: normal;
+		display: flex;
+	}
+	
+	.valeur::before {
+		/*
+			content: "\00a0:\00a0";		
+		*/
+	}
+	
+	.info {
+		margin-left: 2px;
+		font-style: italic;
+	}
+	
+	.incantation .info {
+		font-size: 8px;
+	}
+	
+	.back {
+		display:flex;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+	
+	.back .body {
+		margin: 10px 10px 10px 10px;
+		text-align: justify;
+	}
+	
+	.back .body.max {
+		width: 90%;
+		height: 90%;
+	}
+	
+	.back .body.normal {
+		font-size: 12px;
+	}
+	
+	.back .body.medium {
+		font-size: 11px;
+	}
+	
+	.back .body.small {
+		font-size: 9.5px;
+	}
+	
+	.back .body.x-small {
+		font-size: 8px;
+	}
+	.back .body.xx-small {
+		font-size: 7px;
+	}
+	
+	.card .face ul {
+		padding-inline-start: 20px;
+	}	
+	
+	.card input[type="text"]{
+		font-size: x-small;
+		min-width:5px;
+	}
+		
+	input[type="text"], select,  option{
+		border:none;
+		background-color:transparent;
+	}
+	
+	*:focus{
+		outline: none;
+		box-shadow: 0 0 2pt 1pt red;
+	}
+	
+	input.paramNameInput {
+		font-weight: bold;
+	}
+	
+	input.paramValueInput {
+		border: dashed 1px lightgrey;
+	}
+	
+	input.paramInfoInput {
+		font-style: italic;
+		border: dotted 1px lightgrey;
+	}
+	
+	
+	
+	.bandeau {
+		font-size: small;
+		
+		border: solid 2px ;
+		border-radius: 10px;
+		padding: 5px;
+		
+		background-color: #f2f2f2;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		margin: 10px;
+	}
+	
+	.bandeau h3 {	
+		font-weight: bold;
+		font-size: medium;
+	}
+	
+	.universe {
+		max-width: 29.7cm;
+		height: 100px;
+	}
+	
+	.universe.fixed {	
+		position: fixed;
+		top: calc(50vh - 150px);
+		left: 29cm;
+		height: 300px;
+	}
+	
+
+
+	
+	
+	
+	.bandeau input[type="text"], .bandeau input[type="submit"], .bandeau select, .bandeau option{
+		margin: 5px;
+	}
+	
+	.bandeau input[type="text"]{
+		border-radius: 5px;
+	}
+	
+	.bandeau select, .bandeau option{
+		border-radius: 10px;
+	}
+	
+	
+	.inputs {
+		flex-direction: row;
+	}
+	
+	.inputs input[type="text"]{
+		background-color:#f2f2f2;
+	}
+	
+	.inputs select, .universe select{
+		background-color:#ffffff;
+	}
+	
+	
+	
+	
+	.styles, .logos, .zones {
+		width: 600px;
+	}
+	
+	.styleDef, .logoDef, .zoneDef {
+		display: flex;
+		align-items: center
+	}
+	
+	.styleDef input[type="color"]{
+		width: 20px;
+		height: 22px;
+		border-radius:22px;
+		margin: 5px;
+	}
+	
+	.logoDef img{
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+	}
+	
+	.zoneDef img{
+		width: 50px;
+		height: 50px;
+		margin: 5px;
+	}
+	
+	@media print {
+		.card {
+			display: none;
+		}
+		
+		.card.PRINT {
+			display: flex;
+		}
+		
+		.no-print{
+			display: none;
+		}
+		
+		em {
+			background-color : #ffffff;
+		}
+	}
