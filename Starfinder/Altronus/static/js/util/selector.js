@@ -464,7 +464,8 @@ function downloadJson() {
 	
 	var jsonWriter = new JsonWriter();
 	currentUniverse.printJson(jsonWriter);
-	var json = JSON.stringify(JSON.parse(jsonWriter.text),null,2);
+
+	var json = JSON.stringify(JSON.parse(jsonWriter.text));
 	
 	var element = document.createElement('a');
 	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(json));

@@ -263,8 +263,8 @@ c_sante.addElementEncart(new Parametre('Classe d\'armure cinétique', '#perso.ci
 c_sante.addElementEncart(new Parametre('Classe d\'armure énergétique',  '#perso.energetique#'));
 									
 var block = new Block();
-block.addElement(new Parametre('Points d\'endurance', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/' + '#perso.endurance#'));
-block.addElement(new Parametre('Points de vie', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/' + '#perso.pv#'));
+block.addElement(new Parametre('Points d\'endurance', '#perso.currentEndurance# / #perso.endurance#'));
+block.addElement(new Parametre('Points de vie', '#perso.currentPv# / #perso.pv#'));
 var param = new Parametre('Points de persévérance', '');
 var checkboxes = new CheckBoxes();
 for(var compKey in altronus.getPerseveranceList()){

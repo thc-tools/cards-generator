@@ -10,6 +10,11 @@ function Personnage(id, nom, nomVo, classeName, raceName, themeName, alignement)
 	this.nomVo = nomVo;
 	
 	this.niveau = 0;
+    this.xp = 0;
+
+    this.currentPv = 0;
+    this.currentEndurance = 0;
+    this.currentPerseverance = 0;
 	
 	this.alignement = alignement;
 	
@@ -58,6 +63,22 @@ function Personnage(id, nom, nomVo, classeName, raceName, themeName, alignement)
 
 Personnage.prototype.setNiveau = function(niveau){
 	this.niveau = niveau;
+}
+
+Personnage.prototype.setXp = function(xp){
+	this.xp = xp;
+}
+
+Personnage.prototype.setCurrentPv = function(currentPv){
+	this.currentPv = currentPv;
+}
+
+Personnage.prototype.setCurrentEndurance = function(currentEndurance){
+	this.currentEndurance = currentEndurance;
+}
+
+Personnage.prototype.setCurrentPerseverance = function(currentPerseverance){
+	this.currentPerseverance = currentPerseverance;
 }
 
 Personnage.prototype.setBaseCarac = function(nom, value){
@@ -179,7 +200,7 @@ Personnage.prototype.resolve = function(){
 		if(equipedArmure == undefined){
 			alert('Armure équipée non trouvée : ' + this.equipedArmureName);
 		} else {
-			this.equipedArmure + equipedArmure;
+			this.equipedArmure = equipedArmure;
 		}
 	
 	}
@@ -189,6 +210,7 @@ Personnage.prototype.computeByNiveau = function(prevNiveau){
 	this.computeNoms();
 	this.computeNiveau(prevNiveau);
 	this.computeCaracs();
+    this.computeDc();
 	this.computeBba();
 	this.computePv();
 	this.computeEndurance();
@@ -205,6 +227,7 @@ Personnage.prototype.computeNiveau = function(prevNiveau){
 	var niv = prevNiveau ? (parseInt(this.niveau) - 1) : parseInt(this.niveau);
 	
 	this.save('niveau', niv);
+    this.save('xp', parseInt(this.xp));
 }
 
 Personnage.prototype.computeNoms = function(){
@@ -242,12 +265,21 @@ Personnage.prototype.computeCarac = function(nom){
 	this.save('mod_' + nom + '_aff', (mod >= 0 ? '+' : '') + mod);
 }
 
+Personnage.prototype.computeDc = function(){
+	var dc = 10 + Math.max(Math.floor(this.get('niveau') /2) ,1) + this.get('mod_' + this.classe.caracEssentielle);
+	this.save('dc', dc);
+}
+
 Personnage.prototype.computePv = function(){
 	this.save('pv_classe', parseInt(this.classe.pv));
 	this.save('pv_race', parseInt(this.race.pv));
 
 	var pv = this.get('pv_race') + ( this.get('niveau') * this.get('pv_classe'));
 	this.save('pv',  pv);
+
+	this.save('currentEndurance', parseInt(this.currentEndurance));
+	this.save('currentPv', parseInt(this.currentPv));
+    this.save('currentPerseverance', this.currentPerseverance);
 }
 
 Personnage.prototype.computeEndurance = function(){
@@ -385,12 +417,12 @@ Personnage.prototype.getPerseveranceList = function(){
 Personnage.prototype.computeArmes = function(){
 	for(var [armeKey, arme] of this.armes){
 		
-		var attaque = this.get('bba') + (arme.isContact ? this.get('mod_For') : this.get('mod_Dex'));
-		var bonusDegat = (arme.isContact ? this.get('mod_For') : 0) + (arme.hasDegatCharisme ? this.get('mod_Cha') : 0);
+		var attaque = this.get('bba') + (arme.isContact == "true" ? this.get('mod_For') : this.get('mod_Dex'));
+		var bonusDegat = (arme.isContact == "true" ? this.get('mod_For') : 0) + (arme.hasDegatCharisme == "true" ? this.get('mod_Cha') : 0);
 		var bonusDegat_aff = (bonusDegat > 0 ? (' +' + bonusDegat) : '');
 		var degats = arme.degatBase + bonusDegat_aff + ' (' + arme.typeDegat + ')' + (arme.degatSup != undefined ? ' +' + arme.degatSup + ' (' + arme.typeSup + ')' : '');
 		
-		arme.save('attaque', attaque);
+		arme.save('attaque', "+" + attaque);
 		arme.save('bonusDegat', bonusDegat);
 		arme.save('bonusDegat_aff', bonusDegat_aff);
 		arme.save('degats', degats);
@@ -421,11 +453,16 @@ Personnage.prototype.printJson = function(json){
 	personnage.writeParam("nom", this.nom);
 	personnage.writeParam("nomVo", this.nomVo);
 	personnage.writeParam("niveau", this.niveau);
+    personnage.writeParam("xp", this.xp);
 	personnage.writeParam("classeName", this.classeName);
 	personnage.writeParam("raceName", this.raceName);
 	personnage.writeParam("themeName", this.themeName);
 	personnage.writeParam("alignement", this.alignement);
 	personnage.writeParam("equipedArmureName", this.equipedArmureName);
+
+    personnage.writeParam("currentPv", this.currentPv);
+    personnage.writeParam("currentEndurance", this.currentEndurance);
+    personnage.writeParam("currentPerseverance", this.currentPerseverance);
 	
 	var armesTab = personnage.writeParamTab("armesNames");
 		for(var armeName of this.armesNames){
@@ -493,6 +530,11 @@ function personnageFromJson(personnageNode){
 	var personnage = new Personnage(personnageNode['id'], personnageNode['nom'], personnageNode['nomVo'], personnageNode['classeName'], personnageNode['raceName'], personnageNode['themeName'], personnageNode['alignement']);
 	
 	personnage.setNiveau(personnageNode['niveau']);
+    personnage.setXp(personnageNode['xp']);
+
+    personnage.setCurrentPv(personnageNode['currentPv']);
+    personnage.setCurrentEndurance(personnageNode['currentEndurance']);
+    personnage.setCurrentPerseverance(personnageNode['currentPerseverance']);
 	
 	personnageNode['armesNames'].forEach(armeName => personnage.addArmeName(armeName));
 	personnageNode['armuresNames'].forEach(armureName => personnage.addArmureName(armureName));
